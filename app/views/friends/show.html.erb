@@ -1,0 +1,21 @@
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  
+    <h5 class="card-title" >
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+<br>
+    <h6 class="card-subtitle mb-2 text-muted">
+    <%= @friend.email %> |
+    <%= @friend.phone %> |
+    <%= @friend.twitter %>
+
+<br> </br>
+
+<%= link_to 'Rediger', edit_friend_path(@friend), class:"btn btn-secondary btn-sm" %>
+<td><%= link_to 'Slet', @friend, method: :delete, data: { confirm: 'Er du nu sikker?' }, class: "btn btn-outline-danger btn-sm" %></td> 
+<%= link_to 'Tilbage', friends_path, class:"btn btn-secondary btn-sm" %>
+
+    
+</div>
